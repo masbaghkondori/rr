@@ -1,0 +1,12 @@
+package first.prject;
+import static org.junit.Assert.*;
+
+public class TestMyMethod {
+
+	public void test(){
+		MyMethod mm=new MyMethod();
+				assertEquals(mm.add1(1),2);
+	}
+	
+
+}

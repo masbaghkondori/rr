@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="com.assignment_4.subclasses.PersonalAccount"/>
 <fullyQualifiedTypeName name="com.assignment_4.subclasses.SavingAccount"/>
 <fullyQualifiedTypeName name="com.assignment_4.superclasses.BankAccount"/>
+<fullyQualifiedTypeName name="com.assignment_4.interfaces.BankOperations"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.assignment_4.superclasses.Human"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,71 @@
+/*Class diagram
+Class person:
+The class Person is a superclass that has four attributes:
+	age (represented as an int, e.g. 28)
+	firstName (represented as a String, e.g. “Rafael”)
+	lastName (represented as a String, e.g. “Silva”)
+	gender (represented as a char, e.g. ‘M’)
+
+The class Person has also a constructor method that takes all the four attributes as parameters.
+	public Person(String firstName, String lastName, int age, char gender){}
+
+And also has getters and setters methods for the attributes:
+	public void setFirstName(String firstName) {}
+	public void setLastName(String lastName) {}
+	public void setAge(int age) {}
+	public void setGender(char gender) {}
+	public String getFirstName() {}
+	public String getLastName() {}
+	public int getAge() {}
+	public char getGender() {}
+
+public class Person {
+
+}*/
+
+public class Person {
+	protected int age = 28;
+	protected String firstname = "Rafael";
+	protected String lastname = "Silva";
+	protected char gender = 'M';
+
+	public Person(String firstName, String lastName, int age, char gender){
+		this.firstname=firstName;
+		this.lastname=lastName;
+		this.age=age;
+
+		this.gender=gender;
+	}
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+}

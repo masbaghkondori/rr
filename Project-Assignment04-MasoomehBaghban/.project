@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>nacka_java</name>
+			<type>2</type>
+			<location>D:/Elham/nacka_java</location>
+		</link>
+		<link>
+			<name>nacka_java/Exercise/_017InterfaceEx2</name>
+			<type>2</type>
+			<location>D:/Elham/nacka_java/Exercise</location>
+		</link>
+		<link>
+			<name>nacka_java/Exercise2/_017InterfaceEx2</name>
+			<type>2</type>
+			<location>D:/Elham/nacka_java/Exercise</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -1,0 +1,130 @@
+import java.text.DecimalFormat;
+
+/*The class Student will inherit all the characteristics of the class Person. i.e. Student is a subclass of Person.
+Further, the class Student has four own attributes:
+	firstGrade (represented by a double, e.g. 5.0)
+	secondGrade (represented by a double, e.g. 5.0)
+	thirdGrade (represented by a double, e.g. 5.0)
+	averageGrade(represented by a double, e.g. 5.0)
+
+
+The class Student will have two Constructor methods. In the first Constructor, the parameters used by 
+Constructor will be those who were inherited from the superclass Person. 
+i.e. firstName, lastName, age and gender.
+	public Student(String firstName, String lastName, int age, char gender) {}
+
+The second constructor method will take the own attributes of the class Student, besides the ones inherited 
+from the class Person.
+	public Student (String firstName, String lastName, int age, char gender, double firstGrade, 
+    	double secondGrade, double thirdGrade) {}
+
+Moreover, the class Student will have getters and setters methods for its own attributes and will inherit 
+the
+ getters and setters methods from the superclass Person, i.e. no method override for the methods of the 
+ superclass. Besides these methods, the method will have a method calculateAverage() with two 
+ signatures, a method hasClearedTheCourse() and a method toString(). The methods are:
+	setFirstGrade(double firstGrade){}
+	setSecondGrade(double secondGrade){}
+	setThirdGrade(double thirdGrade){}
+	setAverageGrade(double averageGrade){}
+	getFirstGrade(){}
+	getSecondGrade(){}
+	getThirdGrade(){}
+	getAverageGrade(){}
+	calculateAverage(){}
+	calculateAverage(double firstGrade, double secondGrade, double thirdGrade){}
+	hasClearedTheCourse(){}
+	toString(){}
+
+
+Further information about the three methods:
+1.	calculateAverage(): This method will access the three grades of a student and will calculate
+ the average of the grades. The method will, thus, set the final value to the attribute averageGrade
+  through the method setAverageGrade(double averageGrade) and also return the averageGrade as a double.
+2.	calculateAverage(double firstGrade, double secondGrade, double thirdGrade): This method will access 
+the three grades of a student and will calculate the average of the grades. 
+The method will, thus, set the final value to the attribute averageGrade through 
+the method setAverageGrade(double averageGrade) and also return the averageGrade as a double.
+3.	hasClearedTheCourse(): This method will return a boolean value that is used to indicate if 
+the student has cleared the course or not. The rule is; if the the averageGrade is less than 6.0, 
+the student has not cleared the course and the method will return false. Otherwise, 
+the method will return true.
+4.	toString(){}: This method will return a String that contains all
+ information about a particular student.
+  Use the example below or implement your own in a similar fashion*/
+public class Student extends Person{
+	private double firstGrade=5.0; 
+	private double secondGrade=5.0;
+	private double thirdGrade=5.0;
+	private double averageGrade=5.0;
+	
+	public Student(String firstName, String lastName, int age, char gender) {
+		super(firstName, lastName, age, gender);
+		
+		
+	}
+	public Student(String firstName, String lastName, int age, char gender, double firstGrade, double secondGrade,
+			double thirdGrade) {
+		super(firstName, lastName, age, gender);
+		this.firstGrade = firstGrade;
+		this.secondGrade = secondGrade;
+		this.thirdGrade = thirdGrade;
+		this.averageGrade = averageGrade;
+	}
+
+	public double getFirstGrade() {
+		return firstGrade;
+	}
+
+	public void setFirstGrade(double firstGrade) {
+		this.firstGrade = firstGrade;
+	}
+
+	public double getSecondGrade() {
+		return secondGrade;
+	}
+
+	public void setSecondGrade(double secondGrade) {
+		this.secondGrade = secondGrade;
+	}
+
+	public double getThirdGrade() {
+		return thirdGrade;
+	}
+
+	public void setThirdGrade(double thirdGrade) {
+		this.thirdGrade = thirdGrade;
+	}
+	
+
+	public double calculateAverage(double firstGrade, double secondGrade, double thirdGrade){
+		double averageGrade =(firstGrade+secondGrade+thirdGrade)/3;
+		return averageGrade;
+	}
+	
+
+	public boolean hasClearedTheCourse(){
+		
+		boolean cleared;
+		if (averageGrade<6)
+		 cleared=false;
+		else cleared=true;
+				return cleared;
+		
+	}
+	
+	
+	public String toString(){
+		calculateAverage(this.getFirstGrade(),getSecondGrade(),getThirdGrade());
+		DecimalFormat df =new DecimalFormat("#.0");
+		if (hasClearedTheCourse()){
+			return"Student"+getFirstName()+" " +getLastName()+"\n"+"Grades: "+this.firstGrade+", "+this.secondGrade+" ,"
++"  ,"+"\nThe student has cleared the course\n----------------";
+		}
+		return "Student:  "+getFirstNAme(" "+ getLastName()+"\n"+"Grades:"+ this.firstGrade+", ")
+		+this.secondGrade+" , "+this.thirdGrade+"\nFinalGrade: "+df.format(this.getAverageGrade())
+		+"\nThe student has not cleared the course\n--------";
+		System.out.println(Student.toString());
+	}
+
+}
