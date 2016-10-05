@@ -30,9 +30,16 @@ your project. On eclipse, on the top menu “Project-> generate javadoc”.
 public class BankCustomer extends Human {
 	// invoking  constructor ofsuperclass
 	private ArrayList customerAccounts = new ArrayList<BankAccount>(); 
-	// constructor of the class BankCustomer calling superclass' attributes
-	
-	public BankCustomer()(ArrayList customerAccounts(String name ,int age)) { 
+
+	public BankCustomer(String name, int age, ArrayList customerAccounts) { // constructor
+																			// of
+																			// the
+																			// class
+																			// BankCustomer
+																			// calling
+																			// superclass'
+																			// attributes
+		super(name, age);
 		this.customerAccounts = customerAccounts;
 	}
 
