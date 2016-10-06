@@ -28,22 +28,19 @@ your project. On eclipse, on the top menu “Project-> generate javadoc”.
 */
 
 public class BankCustomer extends Human {
-
-	// invoking constructor ofsuperclass
-	private ArrayList<BankAccount> customerAccounts = new ArrayList<BankAccount>();
+	// invoking  constructor ofsuperclass
+	private ArrayList<BankAccount> customerAccounts = new ArrayList<BankAccount>(); 
 	// constructor of the class BankCustomer calling superclass' attributes
-	// public BankCustomer(String name, int age, ArrayList[][] customerAccounts)
-	// {
-	// public BankCustomer(ArrayList customerAccounts) {
-	//
-	//// super(name, age);
-	// this.customerAccounts = customerAccounts(super.name,super.age);
-	// }
+//	public BankCustomer(String name, int age, ArrayList[][] customerAccounts) {
+//public BankCustomer(ArrayList customerAccounts) { 
+//
+////		super(name, age);
+//		this.customerAccounts = customerAccounts(super.name,super.age);
+//	}
 
-	public BankCustomer(String name, int age, ArrayList<BankAccount> customerAccounts) {
-		super(name, age);
-		this.customerAccounts = customerAccounts;
-	}
+	public void customerAccounts(String name, int age) {
+this.customerAccounts = customerAccounts;
+}
 
 	public ArrayList getCustomerAccounts() {
 		return customerAccounts;
@@ -68,55 +65,47 @@ public class BankCustomer extends Human {
 	 */
 
 	public void depositToAccount(String accountNumber, double amount) {
+		
 
 		for (int i = 0; i < customerAccounts.size(); i++) {
 			/*
 			 * //since AccountNumber is a random number so //this instruction
 			 * compares available numbers in arraylist with entered accountnumer
 			 */
-
-			if (customerAccounts.get(i).getAccountNumber().equals(accountNumber))
+			
+			if (customerAccounts.get(i).AccountNumber().equals(accountNumber))
 
 			{
-				customerAccounts.get(i).depositMoney(amount);
+				(customerAccounts.get(i)).depositMoney(amount);
 			}
 		}
 	}
-
-	/*
-	 * withdrawFromAccount(String accountNumber, double amount): that withdraws
-	 * an amount of money from an specific account. The implementation looks
-	 * like the implementation of depositToAccount(String accountNumber, double
-	 * amount). Pay attention just that now you are withdrawing money from the
-	 * account and not depositing!!
-	 */
-	public void withdrawFromAccount(String accountNumber, double amount){
+	/*withdrawFromAccount(String accountNumber, double amount): that withdraws an amount of money
+	 from an specific account. The implementation looks like the implementation of 
+	 depositToAccount(String accountNumber, double amount). Pay attention just that now 
+	 you are withdrawing money from the account and not depositing!!*/
+	public withdrawFromAccount(String accountNumber, double amount){
 
 		for (int i = 0; i < customerAccounts.size(); i++) {
-			if (customerAccounts.get(i).getAccountNumber().equals(accountNumber)&&
-					(customerAccounts.get(i).getBalance()>amount))
+			if (customerAccounts.get(i).AccountNumber().equals(accountNumber)&&(customerAccounts.get(i).Balance()>amount))
 		
 
 		{
-				double b=customerAccounts.get(i).getBalance()-amount;
-				 customerAccounts.get(i).setBalance(b);
+				customerAccounts.get(i).setBalance(customerAccounts.get(i).getBalance()-amount);
 		}
 	}
+		
 	}
+	/*toString(): That prints the name and the age of a bankCustomer in one line and, after that, the 
+	information of all accounts that the customer. One account per line. As an example:
+	                   
+	When you have implemented your system, test it system with the following Main class:
+	You should get an output more or less like this:
+	Also, as a requirement, you should comment well all your code and generate a Javadoc for 
+	your project. On eclipse, on the top menu “Project-> generate javadoc”.
+	*/
+public String toString(name,age,bankaccount){
+	customerAccount.get(i)
+}
+}	
 
-	/*
-	 * toString(): That prints the name and the age of a bankCustomer in one
-	 * line and, after that, the information of all accounts that the customer.
-	 * One account per line. As an example:
-	 * 
-	 * When you have implemented your system, test it system with the following
-	 * Main class: You should get an output more or less like this: Also, as a
-	 * requirement, you should comment well all your code and generate a Javadoc
-	 * for your project. On eclipse, on the top menu “Project-> generate
-	 * javadoc”.
-	 */
-	
-public String toString(String name,int age,ArrayList<BankAccount> customerAccount){
-	 customerAccount.contains(customerAccount);
-
-}}
